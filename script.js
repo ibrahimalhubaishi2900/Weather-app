@@ -28,8 +28,8 @@ async function fetchWeather(city) {
 
     const { latitude, longitude, name, country_code } = geoData.results[0];
 
-    // Step 2: Fetch Current Weather
-    const weatherRes = await fetch(`https://open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m`);
+    // Step 2: Fetch Current Weather (FIXED URL: added "api.")
+    const weatherRes = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m`);
     const weatherData = await weatherRes.json();
 
     // Step 3: Update UI

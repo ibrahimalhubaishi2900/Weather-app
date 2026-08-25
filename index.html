@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyPulse | Real-Time Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="glass-card">
+    <header>
+      <h1>SkyPulse</h1>
+      <p class="subtitle">Live Weather Insights</p>
+    </header>
+
+    <div class="search-box">
+      <input type="text" id="city-input" placeholder="Search city (e.g., London, Tokyo)..." autocomplete="off" />
+      <button id="search-btn">Search</button>
+    </div>
+
+    <div id="error-message" class="hidden">City not found. Please try again.</div>
+
+    <main id="weather-display" class="hidden">
+      <div class="location-header">
+        <h2 id="city-name">--</h2>
+        <span id="country-code">--</span>
+      </div>
+
+      <div class="temperature-container">
+        <span id="temperature">--</span><span class="unit">°C</span>
+      </div>
+
+      <div class="condition-badge" id="weather-condition">--</div>
+
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <span class="label">Humidity</span>
+          <span class="value" id="humidity">--%</span>
+        </div>
+        <div class="metric-card">
+          <span class="label">Wind Speed</span>
+          <span class="value" id="wind-speed">-- km/h</span>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
